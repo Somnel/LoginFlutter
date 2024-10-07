@@ -42,7 +42,7 @@ jobs:
 
       # Build do projeto (opcional, ajuste se necessário)
       - name: Flutter Build Web
-        run: flutter build web --dart-define=ISCI=${{ secrets.ISCI }}
+        run: flutter build web --dart-define=ISCI=true
 
       # Deploy para Firebase Hosting
       - name: Deploy to Firebase Hosting
