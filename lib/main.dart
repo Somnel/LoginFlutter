@@ -7,9 +7,13 @@ import 'package:login_flutter/widgets/Login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+
+  const bool isCI = bool.fromEnvironment('ISCI', defaultValue: false);
+  if(!isCI) {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
 
   runApp(const MyApp());
 }
