@@ -32,15 +32,9 @@ jobs:
       - name: Install FlutterFire CLI
         run: dart pub global activate flutterfire_cli
 
-      # Configuração do Firebase
-      #- name: Configure Firebase
-        #run: flutterfire configure --project=loginflutter-34c6d
-
       # Verifica e baixa dependências Flutter
       - name: Flutter pub get
-        run: |
-          flutter pub get
-          flutter pub run flutterfire_cli configure
+        run: flutter pub get
 
       # Executa os testes do Flutter
       - name: Run Flutter Tests
