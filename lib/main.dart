@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:login_flutter/widgets/Inicio.dart';
 import 'package:login_flutter/widgets/Login.dart';
-import 'firebase_options.dart';
+import 'firebase_options.dart' if (dart.library.io) 'firebase_options_mock.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
