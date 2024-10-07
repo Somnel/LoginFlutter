@@ -24,9 +24,17 @@ jobs:
         with:
           flutter-version: '3.22.0'  # Versão do Flutter
 
-      # Instalação do FlutterFire CLI e configuração do Firebase
-      - run: dart pub global activate flutterfire_cli
-      - run: flutterfire configure --project=loginflutter-34c6d
+      # Instalação do Firebase CLI
+      - name: Install Firebase CLI
+        run: curl -sL https://firebase.tools | bash
+
+      # Instalação do FlutterFire CLI
+      - name: Install FlutterFire CLI
+        run: dart pub global activate flutterfire_cli
+
+      # Configuração do Firebase
+      - name: Configure Firebase
+        run: flutterfire configure --project=loginflutter-34c6d
 
       # Verifica e baixa dependências Flutter
       - name: Flutter pub get
