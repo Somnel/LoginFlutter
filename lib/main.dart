@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart' if (dart.library.io) 'firebase_options_mock.dart';
 import 'package:login_flutter/widgets/Inicio.dart';
 import 'package:login_flutter/widgets/Login.dart';
-import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
