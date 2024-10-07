@@ -38,8 +38,9 @@ jobs:
 
       # Verifica e baixa dependências Flutter
       - name: Flutter pub get
-        run: flutter pub get
-
+        run: |
+          flutter pub run flutterfire_cli configure
+          flutter pub get
       # Executa os testes do Flutter
       - name: Run Flutter Tests
         run: flutter test
