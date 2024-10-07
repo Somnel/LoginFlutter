@@ -20,8 +20,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: RoteadorTela(),
+    return MaterialApp(
+        home: FutureBuilder(
+            future: Firebase.initializeApp(
+              options: DefaultFirebaseOptions.currentPlatform,
+            ),
+            builder: (context, snapshot) {
+              if(snapshot.connectionState == ConnectionState.done) {
+                return const RoteadorTela();
+              } else if(snapshot.hasError) {
+                return Center(
+                    child: Text('Erro ao inicializar o Firebase: ${snapshot.error}')
+                );
+              }
+
+              return const Center(child: CircularProgressIndicator());
+            }
+        )
     );
   }
 }

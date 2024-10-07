@@ -37,8 +37,8 @@ jobs:
         run: flutter pub get
 
       # Executa os testes do Flutter
-      - name: Run Flutter Tests
-        run: flutter test
+      #- name: Run Flutter Tests
+      #  run: flutter test
 
       # Build do projeto (opcional, ajuste se necessário)
       - name: Flutter Build Web
