@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart' if (dart.library.io) 'firebase_options_mock.dart';
+import 'firebase_options.dart';
 import 'package:login_flutter/widgets/Inicio.dart';
 import 'package:login_flutter/widgets/Login.dart';
 
@@ -9,11 +9,18 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   const bool isCI = bool.fromEnvironment('ISCI', defaultValue: false);
-  if(!isCI) {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  }
+  FirebaseOptions options = isCI ? const FirebaseOptions(
+    apiKey: "FAKE_API_KEY",
+    appId: "FAKE_APP_ID",
+    messagingSenderId: 'FAKE_MESSAGING_SENDER_ID',
+    projectId: 'loginflutter-34c6d',
+    storageBucket: 'loginflutter-34c6d.appspot.com',
+  ) : DefaultFirebaseOptions.currentPlatform;
+
+
+  await Firebase.initializeApp(
+    options: options,
+  );
 
   runApp(const MyApp());
 }
