@@ -1,5 +1,9 @@
 name: Teste Workflow
-on: pull_request
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   continuos-integration:
     runs-on: ubuntu-latest
