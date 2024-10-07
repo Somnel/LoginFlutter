@@ -28,6 +28,10 @@ jobs:
       - name: Install Firebase CLI
         run: curl -sL https://firebase.tools | bash
 
+      # Autenticação usando a conta de serviço
+      - name: Authenticate Firebase
+        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_LOGINFLUTTER_34C6D }}" > "${HOME}/firebase_service_account.json" && firebase auth:login --creds "${HOME}/firebase_service_account.json"
+
       # Instalação do FlutterFire CLI
       - name: Install FlutterFire CLI
         run: dart pub global activate flutterfire_cli
