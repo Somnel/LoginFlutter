@@ -162,6 +162,7 @@ h1 {
 /* Estilos para o parágrafo na seção de introdução */
 .intro p {
   padding-top: 100px;
+  
   font-style: normal;
   /* Estilo de fonte normal */
   font-weight: 400;
@@ -176,6 +177,8 @@ h1 {
   /* Cor do texto em branco (#ffffff) */
   max-width: 55.7rem;
   /* Largura máxima de 45.7rem (457 pixels) */
+
+  padding-bottom: 50px;
 }
 
 /* Estilos para o botão de introdução (.btn-intro) */
