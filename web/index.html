@@ -2,19 +2,6 @@
 <html lang="pt-br">
 
 <head>
-    <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-    -->
     <base href="/">
 
     <!-- iOS meta tags & icons -->
@@ -46,7 +33,7 @@
     <!--Navbar-->
     <div class="container">
         <a href="Index.html">
-            <img src="img/branco.png" class="logo" alt="logo Ubuntu" />
+            <img src="./img/logo.png" class="logo" alt="logo Ubuntu" />
         </a>
         <nav>
             <ul class="header-menu">
@@ -58,22 +45,41 @@
         </nav>
     </div>
 
+    <section id="carrossel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/slide1.jpg" alt="Imagem 1">
+                <img src="img/slide2.jpg" alt="Imagem 2">
+                <img src="img/slide3.jpg" alt="Imagem 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    
+
 
     <main class="intro">
         <!-- 1° Seção - Introudução -->
         <div class="container-intro">
             <!--Primeira seção - Introdução-->
+            <img src="img/logo.png" alt="Descrição da imagem" width="350" height="200">
+
             <h1>Seu Portal para Sucesso no ENEM e Fuvest!</h1>
-            <p>
+            <a><p>
                 Estamos iniciando nossa jornada com a missão de ajudar estudantes a se prepararem para o ENEM, Fuvest e
                 outros vestibulares. Nosso objetivo é oferecer simulados práticos e eficientes, para que você esteja
                 sempre pronto para os desafios acadêmicos.
-            </p>
+            </p></a>
+
+            <img src="img/planos.png"  width="600" height="350">
+
             <div class="btn-intro">
                 <button id="botao">
                     <a href="https://api.whatsapp.com/send/?phone=5513996595444" target="_blank">Faça um orçamento</a>
                 </button>
             </div>
+
             <div class="redes-intro">
                 <a href="https://www.instagram.com/danielmiguel.sm/" target="_blank">
                     <img src="img/icon/social-icon/instagram.svg" alt="instagram" />
@@ -86,6 +92,8 @@
                 </a>
             </div>
         </div>
+
+
     </main>
 
 
@@ -164,6 +172,7 @@
                         como a seleção de questões e de temas. Administradores podem alimentar o aplicativo com conteúdos
                         específicos, proporcionando uma experiência personalizada e eficiente para os estudantes. </p>
                 </div>
+                <img src="img/cel.png"  width="400" height="350">
                 </section>
                 <!--ÚLTIMA SEÇÃO -----------------------------------FOOTER---------------------------------------->
                 <footer class="footer">
@@ -182,7 +191,6 @@
                       </div>
                     </div>
                   </footer>
-
             <script src="js/jquery-3.7.1.js"></script>
             <script src="js/game.js"></script>
 </body>

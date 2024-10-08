@@ -1,278 +1,357 @@
-*{
-    box-sizing: border-box;
-    padding: 0; /* Define o preenchimento como zero */
-    margin: 0; /* Define as margens como zero */
-    box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo do tamanho do elemento */
-    list-style: none; /* Remove os marcadores de lista padrão */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  /* Define o preenchimento como zero */
+  margin: 0;
+  /* Define as margens como zero */
+  box-sizing: border-box;
+  /* Inclui o preenchimento e a borda no cálculo do tamanho do elemento */
+  list-style: none;
+  /* Remove os marcadores de lista padrão */
 }
-body{
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-family: "Open Sans", sans-serif; /* Define a fonte para o corpo do documento */
-    overscroll-behavior: hidden; /* Controla o comportamento de rolagem além dos limites da página */
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal quando não é necessária */  
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  /* Define a fonte para o corpo do documento */
+  overscroll-behavior: hidden;
+  /* Controla o comportamento de rolagem além dos limites da página */
+  overflow-x: hidden;
+  /* Oculta a barra de rolagem horizontal quando não é necessária */
 }
 
 /* Zera as margens e o preenchimento para listas não ordenadas (ul) */
 ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 3.2rem;
-    align-items: center;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
 
 a {
-    text-decoration: none; /* Remove a decoração de sublinhado dos links */
-    color: #ffffff; /* Define a cor do texto dos links como cinza claro (#f0f0f0) */
-  }
+  text-decoration: none;
+  /* Remove a decoração de sublinhado dos links */
+  color: #ffffff;
+  /* Define a cor do texto dos links como cinza claro (#f0f0f0) */
+}
 
-  /* Estilos para botões */
+/* Estilos para botões */
 button {
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
-  }
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
 
 
 /*--------------------------NAVABAR-------------------------------*/
-.logo{
-    width: 12%;
-    display: flex;
+.logo {
+  width: 20%;
+  display: flex;
 }
-  
-  /* Estilos para o container dentro do cabeçalho */
-  .container {
-    display: flex; /* Exibe os elementos como um flex container */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-between; /* Espaço uniformemente entre os itens */
-    background: #00008b;
-    width: 100%; /* Largura total */
-    padding-left: 64px; /* Preenchimento à esquerda de 64 pixels */
-    padding-right: 64px; /* Preenchimento à direita de 64 pixels */
-    
-  }
-  
-  /* Estilos para os links no menu do cabeçalho */
-  .header-menu a {
-    font-style: normal; /* Estilo de fonte normal */
-    font-weight: bold;
-    font-weight: 550; /* Peso da fonte 600 (mais pesado) */
-    font-size: 20px; /* Tamanho da fonte de 16 pixels */
-    line-height: 24px; /* Altura da linha de 24 pixels */
-    display: inline; /* Exibe como bloco inline */
-    position: relative; /* Posição relativa para posicionamento */
-  }
-  
-  /* Efeito de sublinhado nos links do menu quando o mouse está sobre eles */
-  .header-menu a::after {
-    content: "";/*Se tirar o efeito embaixo do nome some*/
-    display: block; /* Exibe como bloco */
-    height: 2px; /* Altura da linha de sublinhado de 2 pixels */
-    width: 0px; /* Largura inicial do sublinhado de 0 pixels */
-    background: #FFA500; /* Cor do sublinhado em azul claro (#00b0f2) */
-    margin-top: 4px; /* Margem superior de 4 pixels */
-    transition: 0.3s; /* Transição de animação de 0.3 segundos */
-    position: absolute; /* Posição absoluta para posicionamento relativo ao elemento pai */
-  }
-  
-  /* Efeito de sublinhado completo quando o mouse está sobre os links do menu */
-  .header-menu a:hover::after {
-    width: 100%; /* Largura do sublinhado de 100% ao passar o mouse */
-  }
+
+/* Estilos para o container dentro do cabeçalho */
+.container {
+  display: flex;
+  /* Exibe os elementos como um flex container */
+  align-items: center;
+  /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between;
+  /* Espaço uniformemente entre os itens */
+  background: #00008b;
+  width: 100%;
+  /* Largura total */
+  padding-left: 64px;
+  /* Preenchimento à esquerda de 64 pixels */
+  padding-right: 64px;
+  /* Preenchimento à direita de 64 pixels */
+  height: 60px;
+
+}
+
+/* Estilos para os links no menu do cabeçalho */
+.header-menu a {
+  font-style: normal;
+  /* Estilo de fonte normal */
+  font-weight: bold;
+  font-weight: 550;
+  /* Peso da fonte 600 (mais pesado) */
+  font-size: 20px;
+  /* Tamanho da fonte de 16 pixels */
+  line-height: 24px;
+  /* Altura da linha de 24 pixels */
+  display: inline;
+  /* Exibe como bloco inline */
+  position: relative;
+  /* Posição relativa para posicionamento */
+}
+
+/* Efeito de sublinhado nos links do menu quando o mouse está sobre eles */
+.header-menu a::after {
+  content: "";
+  /*Se tirar o efeito embaixo do nome some*/
+  display: block;
+  /* Exibe como bloco */
+  height: 2px;
+  /* Altura da linha de sublinhado de 2 pixels */
+  width: 0px;
+  /* Largura inicial do sublinhado de 0 pixels */
+  background: #FFA500;
+  /* Cor do sublinhado em azul claro (#00b0f2) */
+  margin-top: 4px;
+  /* Margem superior de 4 pixels */
+  transition: 0.3s;
+  /* Transição de animação de 0.3 segundos */
+  position: absolute;
+  /* Posição absoluta para posicionamento relativo ao elemento pai */
+}
+
+/* Efeito de sublinhado completo quando o mouse está sobre os links do menu */
+.header-menu a:hover::after {
+  width: 100%;
+  /* Largura do sublinhado de 100% ao passar o mouse */
+}
 
 /*---------------------MAIN-----------------------*/
 /* Introdução */
 
 /* Estilos para a seção de introdução (.intro) */
 .intro {
-    width: 100%; /* Largura total */
-    background-image: url("./Images/img/bg-intro.jpg"); /* Imagem de fundo */
-    background-position: top center; /* Posição do plano de fundo no topo central */
-    background-attachment: fixed; /* Plano de fundo fixo (não rola com a página) */
-    background-repeat: no-repeat; /* Não repetir a imagem de fundo */
-    background-size: cover; /* Cobrir todo o elemento com a imagem de fundo */
-  }
-  
-  /* Estilos para o título h1 na seção de introdução */
-  h1 {
-    padding-top: 60px;
-    font-weight: bold; /* Peso da fonte em negrito */
-    font-size: 3rem; /* Tamanho da fonte de 5.6rem (56 pixels) */
-    line-height: 6.4rem; /* Altura da linha de 6.4rem (64 pixels) */
-    text-align: center; /* Alinhamento de texto centralizado */
-    color: #00008b; /* Cor do texto em branco (#ffffff) */
-  }
-  
-  /* Estilos para o container (.container-intro) na seção de introdução */
-  .container-intro {
-    display: grid; /* Exibir como um grid */
-    place-items: center; /* Alinhar itens ao centro do container */
-    padding: 10rem 5rem;
-    background-color: #ffc898;
-  }
-  
-  /* Estilos para o parágrafo na seção de introdução */
-  .intro p {
-    padding-top: 100px;
-    font-style: normal; /* Estilo de fonte normal */
-    font-weight: 400; /* Peso da fonte 400 (normal) */
-    font-size: 1.3rem; /* Tamanho da fonte de 2.0rem (20 pixels) */
-    line-height: 1.8rem; /* Altura da linha de 2.8rem (28 pixels) */
-    text-align: center; /* Alinhamento de texto centralizado */
-    color: #00008b; /* Cor do texto em branco (#ffffff) */
-    max-width: 55.7rem; /* Largura máxima de 45.7rem (457 pixels) */
-  }
-  
-  /* Estilos para o botão de introdução (.btn-intro) */
-  .btn-intro {
-    padding: 0.6rem 0.2rem; /* Preenchimento de 1.6rem (16 pixels) superior/inferior e 3.2rem (32 pixels) à esquerda/direita */
-    background: #00008b; /* Cor de fundo azul (#00b0f2) */
-    line-height: 2.8rem; /* Altura da linha de 2.8rem (28 pixels) */
-    text-align: center; /* Alinhamento de texto centralizado */
-    margin-top: 5.6rem; /* Margem superior de 5.6rem (56 pixels) */
-    border-radius: 10px;
-  }
-  .btn-intro:hover {
-    padding: 0.6rem 0.2rem; /* Preenchimento de 1.6rem (16 pixels) superior/inferior e 3.2rem (32 pixels) à esquerda/direita */
-    background: #2828bb; /* Cor de fundo azul (#00b0f2) */
-    line-height: 2.8rem; /* Altura da linha de 2.8rem (28 pixels) */
-    text-align: center; /* Alinhamento de texto centralizado */
-    margin-top: 5.6rem; /* Margem superior de 5.6rem (56 pixels) */
-    border-radius: 10px;
-  }
-  
-  /* Estilos para o link dentro do botão de introdução */
-  .btn-intro a {
-    display: block; /* Exibir como bloco */
-    text-decoration: none; /* Remover decoração de texto (sublinhado) */
-  }
-  
-  
-  /* Estilos para botões */
-  #botao {
-    color: #ffffff; /* Cor do texto branco */
-    font-weight: 600; /* Peso da fonte 500 */
-    font-size: 20px; /* Tamanho da fonte de 16 pixels */
-  }
-  
-  /* Estilos para a seção de redes sociais (.redes-intro) */
-  .redes-intro {
-    display: flex; /* Exibir como flexbox */
-    gap: 16px; /* Espaçamento entre elementos de 16 pixels */
-    margin-top: 30rem; /* Margem superior de 7.8rem (78 pixels) */
-    margin-bottom: 5rem;
-  }
+  width: 100%;
+  /* Largura total */
+  background-image: url("./Images/img/bg-intro.jpg");
+  /* Imagem de fundo */
+  background-position: top center;
+  /* Posição do plano de fundo no topo central */
+  background-attachment: fixed;
+  /* Plano de fundo fixo (não rola com a página) */
+  background-repeat: no-repeat;
+  /* Não repetir a imagem de fundo */
+  background-size: cover;
+  /* Cobrir todo o elemento com a imagem de fundo */
+}
+
+/* Estilos para o título h1 na seção de introdução */
+h1 {
+  padding-top: 20px;
+  font-weight: bold;
+  /* Peso da fonte em negrito */
+  font-size: 3rem;
+  /* Tamanho da fonte de 5.6rem (56 pixels) */
+  line-height: 6.4rem;
+  /* Altura da linha de 6.4rem (64 pixels) */
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  color: #00008b;
+  /* Cor do texto em branco (#ffffff) */
+}
+
+/* Estilos para o container (.container-intro) na seção de introdução */
+.container-intro {
+  display: grid;
+  /* Exibir como um grid */
+  place-items: center;
+  /* Alinhar itens ao centro do container */
+  padding: 10rem 5rem;
+  background-color: #ffc898;
+}
+
+/* Estilos para o parágrafo na seção de introdução */
+.intro p {
+  padding-top: 100px;
+  font-style: normal;
+  /* Estilo de fonte normal */
+  font-weight: 400;
+  /* Peso da fonte 400 (normal) */
+  font-size: 1.3rem;
+  /* Tamanho da fonte de 2.0rem (20 pixels) */
+  line-height: 1.8rem;
+  /* Altura da linha de 2.8rem (28 pixels) */
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  color: #00008b;
+  /* Cor do texto em branco (#ffffff) */
+  max-width: 55.7rem;
+  /* Largura máxima de 45.7rem (457 pixels) */
+}
+
+/* Estilos para o botão de introdução (.btn-intro) */
+.btn-intro {
+  padding: 0.6rem 0.2rem;
+  /* Preenchimento de 1.6rem (16 pixels) superior/inferior e 3.2rem (32 pixels) à esquerda/direita */
+  background: #00008b;
+  /* Cor de fundo azul (#00b0f2) */
+  line-height: 2.8rem;
+  /* Altura da linha de 2.8rem (28 pixels) */
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  margin-top: 5.6rem;
+  /* Margem superior de 5.6rem (56 pixels) */
+  border-radius: 10px;
+}
+
+.btn-intro:hover {
+  padding: 0.6rem 0.2rem;
+  /* Preenchimento de 1.6rem (16 pixels) superior/inferior e 3.2rem (32 pixels) à esquerda/direita */
+  background: #2828bb;
+  /* Cor de fundo azul (#00b0f2) */
+  line-height: 2.8rem;
+  /* Altura da linha de 2.8rem (28 pixels) */
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  margin-top: 5.6rem;
+  /* Margem superior de 5.6rem (56 pixels) */
+  border-radius: 10px;
+}
+
+/* Estilos para o link dentro do botão de introdução */
+.btn-intro a {
+  display: block;
+  /* Exibir como bloco */
+  text-decoration: none;
+  /* Remover decoração de texto (sublinhado) */
+}
+
+
+/* Estilos para botões */
+#botao {
+  color: #ffffff;
+  /* Cor do texto branco */
+  font-weight: 600;
+  /* Peso da fonte 500 */
+  font-size: 20px;
+  /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilos para a seção de redes sociais (.redes-intro) */
+.redes-intro {
+  display: flex;
+  /* Exibir como flexbox */
+  gap: 16px;
+  /* Espaçamento entre elementos de 16 pixels */
+  margin-top: 15rem;
+  /* Margem superior de 7.8rem (78 pixels) */
+  margin-bottom: 5rem;
+}
 
 
 /*---------------------SIMULADO-------------------*/
-#quiz{
-    margin-bottom: 20%;
+#quiz {
+  margin-bottom: 20%;
 }
 
-#quiz h1{
-    color: #eda010;
-}
-#quiz p{
-    
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    text-align: center;
-    color: #00008b;
-    display: flex;
-    align-items: center;
-    padding-left: 150px;
-    padding-right: 150px;    
-}
-button{
-    display: block;
-    width: 350px;
-    padding: 10px;
-    border: none;
-    
+#quiz h1 {
+  color: #eda010;
 }
 
-#pergunta{
-    padding-top: 150px;
-    padding-bottom: 10px;
-    color: #00008b;
-    font-weight: 900;
-    font-size: 30px;
+#quiz p {
 
-}
-.resposta{
-    margin: auto auto;
-    margin-bottom: 1%;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 25px;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #00008b;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
-.resposta:hover{
-    background: rgb(255, 174, 0);
+button {
+  display: block;
+  width: 350px;
+  padding: 10px;
+  border: none;
+
 }
 
-.resposta.selecionada{
-background-color:  #FFA500;
+#pergunta {
+  padding-top: 150px;
+  padding-bottom: 10px;
+  color: #00008b;
+  font-weight: 900;
+  font-size: 30px;
+
 }
 
-#confirm{
-    margin: auto auto;
-    background: #00008b;
-    color:#FFA500;
-    border:none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 20px;
-}
-#confirm:hover{
-    background:  #FFA500;
-    color: #00008b;
-    font-weight: 700;
+.resposta {
+  margin: auto auto;
+  margin-bottom: 1%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 25px;
 }
 
-.errada{
-    background: rgb(255, 0, 0);
-    color: white;
+.resposta:hover {
+  background: rgb(255, 174, 0);
 }
 
-.correta{
-    background: #3d3dca;
-    color: white;
-    animation: piscaCerto 0.5s infinite;
+.resposta.selecionada {
+  background-color: #FFA500;
 }
+
+#confirm {
+  margin: auto auto;
+  background: #00008b;
+  color: #FFA500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#confirm:hover {
+  background: #FFA500;
+  color: #00008b;
+  font-weight: 700;
+}
+
+.errada {
+  background: rgb(255, 0, 0);
+  color: white;
+}
+
+.correta {
+  background: #3d3dca;
+  color: white;
+  animation: piscaCerto 0.5s infinite;
+}
+
 /*ANIMAÇÃO CSS*/
-@keyframes piscaCerto{
-    0%,
-    49%{
-        background-color:  #3d3dca;
-    }
-    50%,
-    100% {
-        background-color:  #5555d1
-    }
+@keyframes piscaCerto {
+
+  0%,
+  49% {
+    background-color: #3d3dca;
+  }
+
+  50%,
+  100% {
+    background-color: #5555d1
+  }
 }
 
-#status{
-    padding: 10%;
-    margin-top: 20%;
-    margin-bottom: 25%;
+#status {
+  padding: 10%;
+  margin-top: 20%;
+  margin-bottom: 25%;
 }
 
 
-#novoJogo{
-    background: #00008b;
-    color: white;
-    margin: auto auto;
-    cursor: pointer;
+#novoJogo {
+  background: #00008b;
+  color: white;
+  margin: auto auto;
+  cursor: pointer;
 }
 
-.oculto{
-    display: none;
+.oculto {
+  display: none;
 }
+
 /*----------------------Política------------------------*/
 /* 6ºSECTION - POLÍTICA */
 .politica {
@@ -317,8 +396,7 @@ article {
 
 .politica #quadrado1,
 #quadrado2,
-#quadrado3
- {
+#quadrado3 {
   width: 100%;
   background-color: #00008b;
   margin-top: 4rem;
@@ -332,8 +410,7 @@ article {
 
 .politica #pquadrado1,
 #pquadrado2,
-#pquadrado3
- {
+#pquadrado3 {
   color: #ffffff;
   text-align: center;
   max-width: 47.1rem;
@@ -345,8 +422,7 @@ article {
 
 .politica #quadrado1:hover,
 #quadrado2:hover,
-#quadrado3:hover
- {
+#quadrado3:hover {
 
   background-color: #ffffff;
   transition: all 0.3s ease;
@@ -356,96 +432,164 @@ article {
 
 .politica #quadrado1:hover #pquadrado1,
 #quadrado2:hover #pquadrado2,
-#quadrado3:hover #pquadrado3
- {
+#quadrado3:hover #pquadrado3 {
   color: #00008b;
   transition: all 0.5s ease;
 }
 
-.quadrados h3{
-    color: white;
+.quadrados h3 {
+  color: white;
 }
-.quadrados:hover h3{
-    color: #00008b;
-    transition: all 0.5s ease;    
+
+.quadrados:hover h3 {
+  color: #00008b;
+  transition: all 0.5s ease;
 }
+
 /*Seção 4º --------------------------SOBRE -------------------------------------*/
 .historia {
-    width: 100%; /* Largura total */
-    display: grid; /* Exibir como grid */
-    place-items: center; /* Alinhar itens ao centro do container */
-    padding-top: 10rem;
-    padding-bottom: 15rem;
-  }
+  width: 100%;
+  /* Largura total */
+  display: grid;
+  /* Exibir como grid */
+  place-items: center;
+  /* Alinhar itens ao centro do container */
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+}
 
-  .historia-container{
-    margin: 0 auto;
-    max-width: 70rem;
-  }
+.historia-container {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
 .historia h2 {
-    font-size: 2.2rem; /* Tamanho da fonte de 3.2rem (32 pixels) */
-    text-align: center; /* Alinhamento de texto centralizado */
-    color:#00008b; /* Cor do texto (#002847) */
-    margin: 0 auto; /* Margens automáticas nas laterais (centraliza horizontalmente) */
-    margin-bottom: 5rem; /* Margem inferior de 2.4rem (24 pixels) */
-  }
-  
-  /* Estilos para o elemento span na seção de História */
-  .historia span {
-    color: #FFA500; /* Cor do texto (#0099a8) */
-  }
-  
-  /* Estilos para parágrafos na seção de História */
-  .historia p {
-    text-align: center; /* Alinhamento de texto centralizado */
-    font-weight: 500; /* Peso da fonte 400 (normal) */
-    font-size: 1rem; /* Tamanho da fonte de 1.6rem (16 pixels) */
-    line-height: 2.4rem; /* Altura da linha de 2.4rem (24 pixels) */
-    margin: 0 auto; /* Margens automáticas nas laterais (centraliza horizontalmente) */
-    margin-block: 2.4rem; /* Margem vertical entre parágrafos de 2.4rem (24 pixels) */
-    max-width: 54.1rem; /* Largura máxima de 84.1rem (841 pixels) */
-    color: #da920c; /* Cor do texto (#002847) */
-  }
+  font-size: 2.2rem;
+  /* Tamanho da fonte de 3.2rem (32 pixels) */
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  color: #00008b;
+  /* Cor do texto (#002847) */
+  margin: 0 auto;
+  /* Margens automáticas nas laterais (centraliza horizontalmente) */
+  margin-bottom: 5rem;
+  /* Margem inferior de 2.4rem (24 pixels) */
+}
 
-  /* Footer - final da página */
+/* Estilos para o elemento span na seção de História */
+.historia span {
+  color: #FFA500;
+  /* Cor do texto (#0099a8) */
+}
+
+/* Estilos para parágrafos na seção de História */
+.historia p {
+  text-align: center;
+  /* Alinhamento de texto centralizado */
+  font-weight: 500;
+  /* Peso da fonte 400 (normal) */
+  font-size: 1rem;
+  /* Tamanho da fonte de 1.6rem (16 pixels) */
+  line-height: 2.4rem;
+  /* Altura da linha de 2.4rem (24 pixels) */
+  margin: 0 auto;
+  /* Margens automáticas nas laterais (centraliza horizontalmente) */
+  margin-block: 2.4rem;
+  /* Margem vertical entre parágrafos de 2.4rem (24 pixels) */
+  max-width: 54.1rem;
+  /* Largura máxima de 84.1rem (841 pixels) */
+  color: #da920c;
+  /* Cor do texto (#002847) */
+}
+
+/* Footer - final da página */
 
 .footer {
-    width: 100%;
-   
-    background-color: #00008b;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    ;
-  
+  width: 100%;
+
+  background-color: #00008b;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  ;
+
+}
+
+.container-footer {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 4.4rem;
+  margin-right: 4.4rem;
+  justify-content: space-between;
+}
+
+.footer p {
+
+  font-size: 1rem;
+  line-height: 2rem;
+  color: white;
+}
+
+.footer-right span {
+  font-size: 1.1rem;
+  line-height: 2rem;
+
+}
+
+.container-footer span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  min-width: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+
+  .prev,
+  .next {
+    font-size: 12px;
+    padding: 8px;
   }
-  
-  .container-footer {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 4.4rem;
-    margin-right: 4.4rem;
-    justify-content: space-between;
-  }
-  
-  .footer p {
-    
-    font-size: 1rem;
-    line-height: 2rem;
-    color: white;
-  }
-  
-  .footer-right span {
-    font-size: 1.1rem;
-    line-height: 2rem;
-    
-  }
-  
-  .container-footer span {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  
-  
+}
